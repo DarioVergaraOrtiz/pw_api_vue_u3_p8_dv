@@ -1,4 +1,4 @@
-<!-- src/views/AllEstudiantes.vue -->
+<!-- src/views/ListarEstudianteView.vue -->
 <template>
   <div>
     <ListarEstudiantes />

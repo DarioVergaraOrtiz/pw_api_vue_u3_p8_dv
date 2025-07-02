@@ -51,7 +51,18 @@ export default {
   methods: {
     async consultarUno() {
       try {
-        this.estudiante = await fetchEstudianteById(this.idBuscado)
+        const resp = await fetchEstudianteById(this.idBuscado)
+
+        // Formatear la fecha a yyyy-MM-dd
+        if (resp.fechaNacimiento) {
+          const date = new Date(resp.fechaNacimiento)
+          const yyyy = date.getFullYear()
+          const mm = String(date.getMonth() + 1).padStart(2, '0')
+          const dd = String(date.getDate()).padStart(2, '0')
+          resp.fechaNacimiento = `${yyyy}-${mm}-${dd}`
+        }
+
+        this.estudiante = resp
       } catch (e) {
         console.error('Error al consultar estudiante:', e)
         alert('No se encontró un estudiante con ese ID.')
