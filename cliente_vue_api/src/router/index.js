@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import AllEstudiantesView from '@/views/AllEstudiantes.vue'
-import EstudiantePorIdView from '@/views/EstudiantePorId.vue'
+import AllEstudiantesView from '@/views/ListarEstudiantesView.vue'
+import EstudiantePorIdView from '@/views/ConsultarEstudianteView.vue'
 
 const routes = [
   { path: '/estudiantes', component: AllEstudiantesView },

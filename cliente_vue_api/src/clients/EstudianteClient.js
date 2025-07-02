@@ -1,7 +1,7 @@
 // src/clients/EstudianteClient.js
 import axios from 'axios'
 
-const API_BASE = 'http://localhost:8080/uce/api/estudiantes'
+const API_BASE = 'http://localhost:8081/api/matricula/v1/estudiantes'
 
 export async function fetchAllEstudiantes() {
   const resp = await axios.get(`${API_BASE}`)
