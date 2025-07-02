@@ -1,9 +1,11 @@
 <template>
   <nav>
+    <router-view />
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
+    <router-link to="/estudiantes">Todos Estudiantes</router-link> |
+    <router-link to="/estudiante">Estudiante por ID</router-link>
   </nav>
-  <router-view/>
 </template>
 
 <style>
